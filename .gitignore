@@ -1,32 +1,21 @@
-# Prerequisites
-*.d
+#include<iostream>
+using namespace std;
+class Method
+{
+    public:
+    int a=5;
+    int b=7;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+    int c=a+b;
+    void display()
+    {
+        cout<<"The value of c is :"<<c<<endl;
+    }
+};
+    
+int main()
+{
+    Method m;
+    m.display();
+}
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
