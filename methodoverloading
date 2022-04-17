@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+class Moverloading
+{
+    public:
+    void display(string name, string place)
+    {
+cout<<"The "<<name<<" college is located at "<<place<<endl;
+    }
+    void display(int years)
+    {
+cout<<"This college is running since "<<years<<endl;
+    }
+};
+int main()
+{
+  Moverloading p;
+  p.display("VBIT","Hyderabad");
+  p.display(2004);
+}
