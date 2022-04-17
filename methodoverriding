@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class polymorphism
+{
+    public:
+     virtual void display(string name, string place)
+    {
+      cout<<"The "<<name<<" college is located at "<<place<<endl;
+    }
+};
+class Moverriding:public polymorphism
+{
+   void display(string name, string place)
+    {
+      cout<<"The "<<name<<" college is located at "<<place<<endl;
+    }
+};
+int main()
+{
+  /*polymorphism p;
+  p.display("VBIT","Hyderabad");
+  p.display("JBIET","HYDERABAD");*/
+  polymorphism *p;
+  Moverriding m;
+  p=&m;
+  p->display("VBIT","Hyderabad");
+  p->display("JBIET","HYDERABAD");
+}
