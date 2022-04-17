@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class exception1
+{
+    public:
+    int numerator,denominator,result;
+    void display()
+    {
+    try
+    {
+    cout<<"Enter numerator and denominator values:"<<endl;
+    cin>>numerator>>denominator;
+    
+        if(denominator==0)
+        {
+       throw denominator;
+        }
+     result=numerator/denominator;
+      cout<<"Division is:"<<result;
+    }
+    catch(int ex)
+    {
+      cout<<"Eception:Divide by zero is not allowed :"<<ex<<endl;  
+    }
+    }
+};
+int main()
+{
+    exception1 e;
+    e.display();
+}
