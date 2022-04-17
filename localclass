@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+   void display()
+    {
+    class address
+    {
+     public:
+    string name;
+    int age;
+    void play()
+    {
+        cout<<name<<endl<<age<<endl;
+    }
+    };
+        address a;
+        //a.city="Godhavarikhani";
+        a.name="Akshaya";
+        a.age=18;
+        a.play();
+    }
+     int main()
+{
+    display();
+     return 0;
+}
+   
+
