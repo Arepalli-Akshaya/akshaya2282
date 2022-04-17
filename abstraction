@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class base
+{
+    public:
+    virtual void demo()=0;
+};
+class Constructor1:public base
+{
+     public:
+            string Name;
+            int age;
+           Constructor1(string Name,int age1)
+           {
+             this->Name=Name;
+             age=age1;
+           } 
+           void display()
+           {
+           cout<<"My name is:"<<Name<<endl;
+           }
+           void demo()
+           {
+               cout<<"My age is:"<<age<<endl;
+           }
+};
+int main()
+{
+    Constructor1 c=Constructor1("Rakesh",20);
+    c.display();
+    c.demo();
+  
+}
