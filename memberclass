@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+class person
+{
+    public:
+    string city;
+    class address
+    {
+     public:
+    string name;
+    int age;
+    void play()
+    {
+        cout<<name<<endl<<age<<endl;
+    }
+    };
+    address a;
+    void display()
+    {
+        cout<<city<<endl;//<<a.name<<endl<<a.age<<endl;
+    }
+    };
+    int main()
+    {
+        person p;
+        p.city="Godhavarikhani";
+        p.a.name="Akshaya";
+        p.a.age=18;
+        p.display();
+        p.a.play();
+    }
+
