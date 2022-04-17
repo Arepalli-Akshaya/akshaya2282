@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class inheritancebase
+{
+     public:
+    string name;
+    inheritancebase(string x)
+    {
+        name=x;
+    }
+    void display()
+    {
+        cout<<name<<" is studing Btech."<<endl;
+    }
+};
+ class inheritancederive:public inheritancebase
+ {
+    public:
+    string name1;
+    inheritancederive(string x,string y) :inheritancebase(x)
+    {
+        name1=y;
+    }
+    void demo()
+    {
+        cout<<name<<" is studing Btech in  "<<name1<<" college."<<endl;
+
+    }
+};
+int main()
+{
+    inheritancederive id=inheritancederive("Akshaya","VBIT");
+    id.display();
+    id.demo();
+    inheritancederive id1=inheritancederive("Rakesh","JBIET");
+    id1.display();
+   // id1.demo();
+
+}
