@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+class inheritancebase
+{
+     public:
+    string name;
+    inheritancebase(string x)
+    {
+        name=x;
+    }
+    void display()
+    {
+        cout<<name<<" is studing Btech."<<endl;
+    }
+};
+ class inheritancederive
+ {
+    public:
+    string name1;
+    inheritancederive(string y)
+    {
+        name1=y;
+    }
+    void demo()
+    {
+        cout<<"In the  "<<name1<<" college."<<endl;
+
+    }
+};
+class multiple:public inheritancebase,public inheritancederive
+{
+    public:
+    string name2;
+    multiple(string x,string y,string z):inheritancebase(x),inheritancederive(y)
+    {
+        name2=z;
+    }
+    void play()
+    {
+        cout<<name<<"is studying Btech in "<<name1<<" at the "<<name2<<endl;
+    }
+};
+int main()
+{
+    multiple id=multiple("Akshaya","VBIT","HYD");
+    id.display();
+    id.demo();
+    id.play();
+
+    
+}
