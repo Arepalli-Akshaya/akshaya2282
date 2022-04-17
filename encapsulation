@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+class encapsulation
+{
+    private:
+    string name;
+    int age;
+    public:
+    void setname(string encapsulationname)
+    {
+        name=encapsulationname;
+    }
+    string getname()
+    {
+        cout<<"My name is:"<<name<<endl;
+        return name;
+    }
+    void setage(int encapsulationage)
+    {
+        age=encapsulationage;
+    }
+    int getage()
+    {
+         cout<<"My age is:"<<age<<endl;
+        return age;
+    }
+  /*  void display()
+    {
+        cout<<"My name is:"<<name<<endl;
+        cout<<"My name is:"<<age<<endl;
+    }*/
+};
+int main()
+{
+   encapsulation e;
+    e.setname("Akshaya");
+    e.getname();
+    e.setage(18);
+    e.getage();
+    
+   // e.display();
+}
