@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+class Ooverloading
+{
+    private:
+          int real,image;
+    public:
+    Ooverloading()
+           {
+               real=0;
+               image=0;
+           } 
+
+           Ooverloading(int r,int i)
+           {
+               real=r;
+               image=i;
+           }
+            void display()
+           {
+               cout <<real<<"+"<<image<<endl;
+           }
+           Ooverloading operator + (Ooverloading const &obj)
+           {
+             Ooverloading res;
+             res.real=real+obj.real;
+             res.image=image+obj.image;
+             return res;
+           }
+           
+
+};
+int main()
+{
+    Ooverloading c(7,22);
+    Ooverloading c1(6,4);
+    Ooverloading c2;
+    c2=c+c1;
+    c2.display();
+    return 0;
+}
