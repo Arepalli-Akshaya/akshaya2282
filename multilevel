@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+class inheritancebase
+{
+     public:
+    string name;
+    inheritancebase(string x)
+    {
+        name=x;
+    }
+    void display()
+    {
+        cout<<name<<" is studing Btech."<<endl;
+    }
+};
+ class inheritancederive:public inheritancebase
+ {
+    public:
+    string name1;
+    inheritancederive(string x,string y) :inheritancebase(x)
+    {
+        name1=y;
+    }
+    void demo()
+    {
+        cout<<name<<" is studing Btech in  "<<name1<<" college."<<endl;
+
+    }
+};
+class multilevel:public inheritancederive
+ {
+    public:
+   string name2;
+    multilevel(string x,string y,string z) :inheritancederive(x,y)
+    {
+        name2=z;
+    }
+    void play()
+    {
+        cout<<name<<" is studing Btech in  "<<name1<<" college "<< "at the "<<name2<<endl;
+
+    }
+};
+int main()
+{
+   multilevel id1=multilevel("Rakesh","JBIET","HYD");
+    id1.display();
+    id1.demo();
+    id1.play();
+}
