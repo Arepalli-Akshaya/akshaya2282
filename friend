@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class friend1
+{
+    private:
+    int meters;
+    public:
+    friend1()
+    {
+        meters=0;
+    }
+    void display()
+    {
+        cout<<"Meter value: "<<meters<<endl;
+    }
+    friend void play(friend1 &f);
+};
+void play(friend1 &f)
+{
+    f.meters=f.meters+7;
+}
+int main()
+{
+    friend1 f1;
+    f1.display();
+   play(f1);
+   f1.display();
+    return 0;
+}
