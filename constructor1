@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class Constructor
+{
+     public:
+            string Name;
+           Constructor(string Name)
+           {
+             this->Name=Name;
+           } 
+           void display()
+           {
+           cout<<"My name is:"<<Name<<endl;
+           }
+           void play()
+           {
+             cout<<"My name is also:"<<Name<<endl;
+           }
+};
+int main()
+{
+    /*Constructor1 c=Constructor1("Rakesh");
+    Constructor1 c1=Constructor1(c);*/
+    Constructor c("Rakesh");
+    Constructor c1(c);
+    c.display();
+    c1.play();
+    return 0;
+}
